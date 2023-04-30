@@ -59,7 +59,6 @@ h1 {
     letter-spacing: -1px;
     line-height: var(--h1-height);
 }
-
 h2 {
     font-family: var(--heading-font);
     font-weight: 500;
@@ -69,7 +68,6 @@ h2 {
     letter-spacing: -0.25px;
     line-height: var(--h2-height);
 }
-
 h3 {
     font-family: var(--heading-font);
     font-weight: 500;
@@ -107,18 +105,51 @@ a {
     text-decoration: none;
     color: var(--purple-1);
     font-weight: 500;
-    transition: all 0.25s ease;
+    transition: color 0.25s ease;
 }
 
 a:hover {
     color: var(--primary-accent);
 }
-
 p {
     font-size: var(--p-size);
     line-height: var(--p-height);
     font-weight: 400;
     margin: var(--spacing-md) 0;
+}
+/* Layout Styles */
+.section-container {
+    width: 100%;
+    max-width: var(--standard-width);
+}
+
+.two-column {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.two-column > .col-left {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.two-column > .col-right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
 
 .subtitle,
@@ -157,7 +188,6 @@ p {
     background-color: var(--primary-button-hover);
     cursor: pointer;
 }
-
 .secondary-button {
     font-family: var(--body-font);
     font-size: var(--button-size);
@@ -180,16 +210,15 @@ p {
     justify-content: center;
     align-items: center;
 }
-
 .with-icon > img {
     transition: transform 0.25s ease;
 }
-
 .with-icon:hover > img {
     transform: translateX(4px);
 }
 
 /* NAVBAR */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -198,7 +227,6 @@ p {
     max-width: var(--standard-width);
     padding: 0 var(--spacing-md);
 }
-
 .menu {
     display: flex;
     list-style: none;
@@ -215,11 +243,12 @@ p {
 .menu a:hover {
     text-decoration: underline;
 }
-
 .navbar-button {
-    background-color: rgba(250, 250, 250, 0.25);
+    background: rgba(250, 250, 250, 0.25);
 }
 
 .navbar-button:hover {
     background: rgba(250, 250, 250, 0.5);
 }
+
+/* HERO CONTENT */
